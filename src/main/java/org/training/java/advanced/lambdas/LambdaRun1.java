@@ -20,7 +20,7 @@ public class LambdaRun1 {
         execute3.executeAndPrint("test");
         String test = execute3.execute("test");
         System.out.println(test);
-        executeExecutor(e -> prefix + " lambda execution " + e);
+        executeExecutor(e  -> prefix + " lambda execution " + e);
         executeExecutor(e -> " lambda execution " + e);
         executeExecutor(e -> prefix + " xyz  " + e);
 
