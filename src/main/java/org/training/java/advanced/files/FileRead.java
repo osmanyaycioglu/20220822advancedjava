@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FileRead {
@@ -48,11 +49,14 @@ public class FileRead {
                                                  parts[1],
                                                  Integer.parseInt(parts[2]),
                                                  Integer.parseInt(parts[3]));
-                if (customer.getHeight() > 180 && customer.getWeight() < 100){
+                if (customer.getHeight() > 180 && customer.getWeight() < 100) {
                     customerList.add(customer);
                 }
             }
         }
+        Collections.sort(customerList,
+                         (c1, c2) -> c1.getName()
+                                       .compareTo(c2.getName()));
         System.out.println(customerList);
     }
 }
