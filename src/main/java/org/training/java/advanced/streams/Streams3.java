@@ -21,6 +21,8 @@ public class Streams3 {
                                                 .distinct()
                                                 .sorted()
                                                 .map(s -> new Customer(s,
+                                                                       null,
+                                                                       null,
                                                                        null))
                                                 .filter(c -> c.getName()
                                                               .length() >= 5)
@@ -28,6 +30,8 @@ public class Streams3 {
 
         int customerNameLength = stringList.stream()
                                            .map(s -> new Customer(s,
+                                                                  null,
+                                                                  null,
                                                                   null))
                                            .filter(c -> c.getName()
                                                          .length() >= 5)
@@ -38,6 +42,8 @@ public class Streams3 {
 
         List<Customer> customerList2 = stringList.stream()
                                                  .map(s -> new Customer(s,
+                                                                        null,
+                                                                        null,
                                                                         null))
                                                  .filter(c -> c.getName()
                                                                .length() >= 5)
@@ -56,6 +62,8 @@ public class Streams3 {
                                                  .distinct()
                                                  .sorted()
                                                  .map(s -> new Customer(s,
+                                                                        null,
+                                                                        null,
                                                                         null))
                                                  .filter(c -> c.getName()
                                                                .length() >= 5)

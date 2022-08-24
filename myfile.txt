@@ -1,0 +1,2 @@
+osman,yaycıoğlu,200,95
+ali,veli,185,90
