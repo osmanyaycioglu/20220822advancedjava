@@ -4,6 +4,10 @@ public class GenericHolder<A> {
 
     private A value;
 
+    public void show(){
+        System.out.println(value.toString());
+    }
+
     public A getValue() {
         return value;
     }

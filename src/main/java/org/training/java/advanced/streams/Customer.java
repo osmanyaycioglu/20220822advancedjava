@@ -1,5 +1,7 @@
 package org.training.java.advanced.streams;
 
+import java.util.Objects;
+
 public class Customer {
 
     private String name;
@@ -60,5 +62,26 @@ public class Customer {
                 ", height=" + height +
                 ", weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(name,
+                              customer.name) && Objects.equals(surname,
+                                                               customer.surname)
+                && Objects.equals(height,
+                                  customer.height) && Objects.equals(weight,
+                                                                     customer.weight);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name,
+                            surname,
+                            height,
+                            weight);
     }
 }
