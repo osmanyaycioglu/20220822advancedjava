@@ -2,21 +2,27 @@ package org.training.java.advanced.intf;
 
 public class HelloFactory {
 
+    public static final int LANGUAGE_ENGLISH = 1;
+    public static final int LANGUAGE_TURKISH = 2;
+    public static final int LANGUAGE_SPANISH = 3;
+    public static final int LANGUAGE_JAPANESE = 4;
+
     public static IHello createHelloImpl(int index) {
         IHello hello = null;
         switch (index) {
-            case 1:
+            case LANGUAGE_ENGLISH:
                 hello = new HelloEng();
                 break;
-            case 2:
+            case LANGUAGE_TURKISH:
                 hello = new HelloTr();
                 break;
-            case 3:
+            case LANGUAGE_SPANISH:
                 hello = new HelloEsp();
                 break;
-            case 4:
+            case LANGUAGE_JAPANESE:
                 hello = new HelloJp();
                 break;
+
             default:
                 hello = new HelloEng();
                 break;
@@ -24,12 +30,13 @@ public class HelloFactory {
         return hello;
     }
 
+
     public static String getMenu() {
         // String menuStr = "1-İngilizce\n" + "2-Türkçe\n" + "3-İspanyolca\n" + "Seçiminiz\n";
         StringBuilder stringBuilder = new StringBuilder(50);
-        stringBuilder.append("1-İngilizce\n");
-        stringBuilder.append("2-Türkçe\n");
-        stringBuilder.append("3-İspanyolca\n");
+        stringBuilder.append(LANGUAGE_ENGLISH + "-İngilizce\n");
+        stringBuilder.append(LANGUAGE_TURKISH + "-Türkçe\n");
+        stringBuilder.append(LANGUAGE_SPANISH + "-İspanyolca\n");
         stringBuilder.append("Seçiminiz\n");
 //        String str = "str";
 //        for (int i = 0; i < 100; i++) {
